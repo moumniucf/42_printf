@@ -1,17 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/23 15:10:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/25 17:13:21 by youmoumn         ###   ########.fr       */
+/*   Created: 2024/11/25 16:12:06 by youmoumn          #+#    #+#             */
+/*   Updated: 2024/11/25 18:15:50 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-int ft_printf(const char *rst, ...)
-{
-	int len = 0;	
-}
+# ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+#include <libc.h>
+#include <stdarg.h>
+int ft_putchar(char c);
+int	ft_printhex(unsigned int n, char c);
+# endif
