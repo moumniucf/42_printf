@@ -1,34 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printhex.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 16:46:16 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/26 17:25:23 by youmoumn         ###   ########.fr       */
+/*   Created: 2024/11/26 11:46:52 by youmoumn          #+#    #+#             */
+/*   Updated: 2024/11/26 15:28:43 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_printhex(unsigned int n, char c)
+int	ft_putnbr(int n)
 {
-	int		i;
-	char	*uper;
-	char	*lower;
-
-	i = 0;
-	lower = "0123456789abcdef";
-	uper = "0123456789ABCDEF";
-	if (n < 16 && c == 'x')
-		i += ft_putchar(lower[n]);
-	else if (n < 16 && c == 'X')
-		i += ft_putchar(uper[n]);
+	int x = 0;
+	long y;
+	y = (long)n;
+	if(y < 0)
+	{
+		y *= -1;
+		x += ft_putchar('-');
+	}
+	else if(y > 9)
+	{
+		x += ft_putnbr(y / 10);
+		x += ft_putnbr(y % 10);
+	}
 	else
 	{
-		i += ft_printhex(n / 16, c);
-		i += ft_printhex(n % 16, c);
+		x += ft_putchar(y + 48);
 	}
-	return (i);
+	return(x);
+}
+int main()
+{
+	int n = 1000000;
+	printf("[%d]\n", ft_putnbr(n));
 }

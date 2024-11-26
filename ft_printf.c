@@ -6,12 +6,13 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:10:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/25 17:13:21 by youmoumn         ###   ########.fr       */
+/*   Updated: 2024/11/26 17:20:39 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 int ft_printf(const char *rst, ...)
 {
-	int len = 0;	
+	int len;
+	return(1);
 }

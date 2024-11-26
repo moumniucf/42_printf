@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 18:12:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/25 18:25:44 by youmoumn         ###   ########.fr       */
+/*   Updated: 2024/11/26 16:58:13 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 int ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return(0);
+		return (1);
 }

@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printhex.c                                      :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 16:46:16 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/26 17:25:23 by youmoumn         ###   ########.fr       */
+/*   Created: 2024/11/26 11:02:24 by youmoumn          #+#    #+#             */
+/*   Updated: 2024/11/26 11:45:02 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	ft_printhex(unsigned int n, char c)
+int	ft_putstr(char *s)
 {
-	int		i;
-	char	*uper;
-	char	*lower;
-
-	i = 0;
-	lower = "0123456789abcdef";
-	uper = "0123456789ABCDEF";
-	if (n < 16 && c == 'x')
-		i += ft_putchar(lower[n]);
-	else if (n < 16 && c == 'X')
-		i += ft_putchar(uper[n]);
-	else
+	if(!s)
+		s = "0";
+	int i = 0;
+	while(*s)
 	{
-		i += ft_printhex(n / 16, c);
-		i += ft_printhex(n % 16, c);
+		printf("==> %s\n", s);
+		i = ft_putchar(*s++);
+		// printf("<== %s\n", s);
+
 	}
-	return (i);
+	return(i);
+}
+int main()
+{
+	char *s = "youssef";
+	printf("%d\n", ft_putstr(s));
 }
