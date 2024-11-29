@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:10:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/29 10:42:49 by youmoumn         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:58:31 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,10 @@ int	ft_printother(va_list lst, const char c)
 	{
 		ptr += ft_putchar(va_arg(lst, int));
 	}
+	else if (c == 'd' || c == 'i')
+	{
+		ptr += ft_putnbr(va_arg(lst, int));
+	}
 	return (ptr);
 }
 
@@ -43,6 +47,8 @@ int	ft_printf(const char *form, ...)
 
 	va_start (lst, form);
 	x = 0;
+	if (*form == '%' && *form + 1 == '\0')
+		return (0);
 	while (*form)
 	{
 		if (*form == '%')
@@ -50,8 +56,6 @@ int	ft_printf(const char *form, ...)
 			form++;
 			if (*form == 's')
 				x += ft_putstr(va_arg(lst, char *));
-			else if (*form == 'd' || *form == 'i')
-				x += ft_putnbr(va_arg(lst, int));
 			else if (*form == 'x' || *form == 'X')
 				x += ft_printhex(va_arg(lst, int), *form);
 			else

@@ -6,13 +6,13 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:12:06 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/28 17:20:06 by youmoumn         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:59:24 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <libc.h>
+# include <unistd.h>
 # include <stdarg.h>
 
 int	ft_printf(const char *rst, ...);
