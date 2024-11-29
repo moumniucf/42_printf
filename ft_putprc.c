@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putprc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 18:12:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/28 15:14:25 by youmoumn         ###   ########.fr       */
+/*   Created: 2024/11/28 17:15:12 by youmoumn          #+#    #+#             */
+/*   Updated: 2024/11/29 10:34:44 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putprc(char s)
 {
-	write (1, &c, 1);
-	return (1);
+	int	x;
+
+	x = 0;
+	if (s == '%')
+	{
+		x = ft_putchar('%');
+	}
+	return (x);
 }

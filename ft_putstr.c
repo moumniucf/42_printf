@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/26 11:02:24 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/27 16:58:34 by youmoumn         ###   ########.fr       */
+/*   Updated: 2024/11/28 15:00:08 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ int	ft_putstr(char *s)
 	int	x;
 
 	if (!s)
-		s = "(nul)";
+		s = "(null)";
 	x = 0;
 	while (*s)
 	{
-		x += ft_putchar(*s++);
+		x += ft_putchar(*s);
+		s++;
 	}
 	return (x);
 }

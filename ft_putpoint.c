@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putpoint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/25 18:12:11 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/28 15:14:25 by youmoumn         ###   ########.fr       */
+/*   Created: 2024/11/28 16:11:06 by youmoumn          #+#    #+#             */
+/*   Updated: 2024/11/28 17:13:12 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(char c)
+int	ft_putpoint(unsigned long n)
 {
-	write (1, &c, 1);
-	return (1);
+	int		x;
+	char	*s;
+
+	x = 0;
+	s = "0123456789abcdef";
+	if (n >= 16)
+	{
+		x += ft_putpoint(n / 16);
+		x += ft_putpoint(n % 16);
+	}
+	else
+	{
+		x += ft_putchar(s[n]);
+	}
+	return (x);
 }
