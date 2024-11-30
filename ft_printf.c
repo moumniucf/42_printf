@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/23 15:10:54 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/30 16:40:48 by youmoumn         ###   ########.fr       */
+/*   Updated: 2024/11/30 18:17:36 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int	ft_printf(const char *form, ...)
 
 	va_start (lst, form);
 	x = 0;
+	if (write(1, "", 0) == -1)
+		return (-1);
 	while (*form)
 	{
 		if (*form == '%')
@@ -55,6 +57,5 @@ int	ft_printf(const char *form, ...)
 			x += ft_putchar(*form);
 		form++;
 	}
-	va_end(lst);
-	return (x);
+	return (va_end(lst), x);
 }
