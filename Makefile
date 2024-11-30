@@ -6,7 +6,7 @@
 #    By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/25 09:53:31 by youmoumn          #+#    #+#              #
-#    Updated: 2024/11/28 17:20:18 by youmoumn         ###   ########.fr        #
+#    Updated: 2024/11/30 16:49:16 by youmoumn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 HEADER = ft_printf.h
 
-SRC = ft_printhex.c ft_putchar.c ft_putnbr.c  ft_putstr.c ft_printf.c ft_putunsigned.c ft_putpoint.c ft_putprc.c\
+SRC = ft_puthex.c ft_putchar.c ft_putnbr.c  ft_putstr.c ft_printf.c ft_putunsigned.c ft_putpoint.c ft_putprc.c
 
 OBJ = $(SRC:%.c=%.o)
 

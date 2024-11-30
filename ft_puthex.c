@@ -6,14 +6,13 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 15:07:27 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/30 15:07:33 by youmoumn         ###   ########.fr       */
+/*   Updated: 2024/11/30 15:11:17 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "ft_printf.h"
 
-int	ft_printhex(unsigned int n, char c)
+int	ft_puthex(unsigned int n, char c)
 {
 	int		i;
 	char	*uper;
@@ -28,8 +27,8 @@ int	ft_printhex(unsigned int n, char c)
 		i += ft_putchar(uper[n]);
 	else
 	{
-		i += ft_printhex(n / 16, c);
-		i += ft_printhex(n % 16, c);
+		i += ft_puthex(n / 16, c);
+		i += ft_puthex(n % 16, c);
 	}
 	return (i);
 }

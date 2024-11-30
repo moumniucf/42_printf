@@ -6,7 +6,7 @@
 /*   By: youmoumn <youmoumn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:12:06 by youmoumn          #+#    #+#             */
-/*   Updated: 2024/11/30 15:05:32 by youmoumn         ###   ########.fr       */
+/*   Updated: 2024/11/30 15:09:08 by youmoumn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	ft_printf(const char *rst, ...);
 int	ft_putchar(char c);
-int	ft_printhex(unsigned int n, char c);
+int	ft_puthex(unsigned int n, char c);
 int	ft_putstr(char *s);
 int	ft_putnbr(int n);
 int	ft_putunsigned(unsigned int n);
